@@ -1,8 +1,17 @@
 if(is.na(subneg)){subneg=6000}
 
-	datatest2 = subset (datatest2, datatest2$X2_pretest2 > -subneg)
-	datatest2 = subset (datatest2, datatest2$X2_pretest2 <  subneg)
-	
+
+  datatest2 = subset (datatest2, datatest2$X2_pretest2 > -subneg | !is.na(datatest2$X1_pretest1))
+  datatest2 = subset (datatest2, datatest2$X2_pretest2 <  subneg | !is.na(datatest2$X1_pretest1))
+
+  datatest2 = subset (datatest2, 10000*datatest2$mean_pretest > (-subneg+500) | is.na(datatest2$X1_pretest1))
+  datatest2 = subset (datatest2, 10000*datatest2$mean_pretest <  (subneg-500)| is.na(datatest2$X1_pretest1))
+
+c=data.frame(datatest2$mean_pretest,datatest2$X2_pretest2,10000*datatest2$mean_pretest > (-subneg+500) | is.na(datatest2$X1_pretest1),
+           10000*datatest2$mean_pretest <  (subneg-500)| is.na(datatest2$X1_pretest1),
+           datatest2$X2_pretest2 > -subneg | !is.na(datatest2$X1_pretest1),
+           datatest2$X2_pretest2 <  subneg | !is.na(datatest2$X1_pretest1), is.na(datatest2$X1_pretest1) )	
+colnames (c)= c(1:7)
 
 Pvalue <- function(x){
 	suppressWarnings(wt <-wilcox.test(x, alternative="two.sided"))
