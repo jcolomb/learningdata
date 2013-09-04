@@ -1,0 +1,37 @@
+Text for figure legends
+
+
+
+Putative mutants: no phenotype
+Full genotype of the flies tested is indicated below.  PKC53e- : Mi_PKC53 . PKCdelta- : Mi_PKCdelta . W-PInac- : w-;Pbac_PKCina . WT  (Wtb) : Wtb .
+
+PKC53e & Inac RNAi experiments
+Full genotype of the flies tested is indicated below.  CS  x PKC53eRi_V : ;;UAS_PKC53eRNAi_27696/+ . elavG4;tG80  x PKC53eRi_V : elavGal4/+;tubGal80ts/+;UAS_PKC53eRNAI_27696/+ . elavG4;tG80  x PKCInacRi : elavGal4/+;tubGal80ts/+;UAS_PKCInacRNAI_2895/+ .
+
+PKC53eRNAi experiments
+Full genotype of the flies tested is indicated below.  elavG4;tG80  x PKC53eRi_V : UAS_PKC53eRNAi_vienna/+ . CS  x PKC53eRi_V : elavG4/+;tubGal80ts/+;UAS_PKC53eRNAi_vienna/+ . CS  x PKC53eRi_T : elavG4/+;tubGal80ts/+ . elavG4;tG80  x CS : elavG4/+;tubGal80ts/UAS_PKC53eRNAi_Trip . elavG4;tG80  x PKC53eRi_T : UAS_PKC53eRNAi_Trip/+ .
+
+Mild heat shocks (pooled)
+Full genotype of the flies tested is indicated below.  elavG4  x CS : elav-Gal4/+ . elavG4  x tG80_PKCi  : elav-Gal4/+;tubGal80ts/+ ; UAS-PKCi/+ . CS  x tG80_PKCi  : tubGal80ts/+ ; UAS-PKCi/+ .. Different protocols were tested: Heat shock at 33° for 15h, 36° for 2h, and 37°for 1h
+
+Too strong heatshock (37° for 2h)
+Full genotype of the flies tested is indicated below.  elavG4  x CS : elav-Gal4/+ . elavG4  x tG80_PKCi  : elav-Gal4/+;tubGal80ts/+;UAS-PKCi/+ . CS  x tG80_PKCi  : tubGal80ts/+;UAS-PKCi/+ .
+
+PKCi: elav positive control
+Full genotype of the flies tested is indicated below.  elavG4  x CS : elav-Gal4/+ . elavG4  x tG80_PKCi  : elav-Gal4/+;tubGal80ts/+ ; UAS-PKCi/+ . CS  x tG80_PKCi  : tubGal80ts/+ ; UAS-PKCi/+ .
+
+PKCi: Gal4 without phenotype
+Full genotype of the flies tested is indicated below.  7yc819  x tG80_PKCi  : tubGal80ts/+ ; UAS-PKCi/+ __ H24-Gal4 . c232  x tG80_PKCi  : tubGal80ts/+ ; UAS-PKCi/7y_Gal4,c819-Gal4 . H24  x tG80_PKCi  : tubGal80ts/+ ; UAS-PKCi/c232-Gal4 . Both a positive and a negative control were tested in parallel with this experiment.
+
+PKCi: d42 & OK371
+Full genotype of the flies tested is indicated below.  CS  x tG80_PKCi  : tubGal80ts/+ ; UAS-PKCi/+ . d42  x tG80_PKCi  : tubGal80ts/+ ; UAS-PKCi/d42-Gal4 . OK371  x tG80_PKCi  : tubGal80ts/+ ; UAS-PKCi/+;OK371/+ . d42G4  x CS : d42Gal4/+ . OK371  x CS : OK371/+ . Both a positive and a negative control were tested in parallel with this experiment.
+
+PKCi: motorneurons lines
+Full genotype of the flies tested is indicated below.  c380G4  x CS : c380-Gal4/+ . c380  x tG80_PKCi  : c380Gal4/+; tubGal80ts/+ ; UAS-PKCi/+ . d42G4  x CS : d42Gal4/+ . d42  x tG80_PKCi  : tubGal80ts/+ ; UAS-PKCi/d42-Gal4 . Both a positive and a negative control were tested in parallel with this experiment.
+
+PKCi: d42Gal4,chaG80
+Full genotype of the flies tested is indicated below.  d42chaG80  x CS : d42-Gal4, cha-Gal80/+ . d42chaG80  x tG80_PKCi  : tubGal80ts/+ ; UAS-PKCi/d42-Gal4, cha-Gal80 . CS  x tG80_PKCi  : tubGal80ts/+ ; UAS-PKCi/+ .
+
+Presence of a second UAS 
+ prevents the PKC inhibition
+Full genotype of the flies tested is indicated below.  CS  x tG80_PKCi  : UAS-GFP,C380-GAL4/+;;cha-Gal80/+ . G_d42chaG80  x CS : UAS-GFP,C380-GAL4;tubGal80ts/+;UASPKCi/cha-Gal80 . G_d42chaG80  x tG80_PKCi  : tubGal80ts/+;UASPKCi/+ . Gc380_chaG80  x tG80_PKCi  : UAS-GFP;;d42Gal4,chaGal80/+ . Gc380_chaG80  x CS : UAS-GFP;tubGal80ts/+;UASPKCi/d42Gal4,chaGal80 .
