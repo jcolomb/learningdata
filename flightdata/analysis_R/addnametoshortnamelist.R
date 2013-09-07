@@ -18,4 +18,4 @@ for (i in 1:length(newname)){
 tobind=data.frame(toadd, toadd, toadd2)
 colnames(tobind)=colnames(Names)
 Names2= rbind(Names,tobind)
-write.csv(file=("shortname.csv"), Names2)
+write.csv(file=("shortnames.csv"), Names2)

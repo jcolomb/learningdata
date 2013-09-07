@@ -1,0 +1,6 @@
+Text for figure legends
+
+
+
+Putative mutants: no phenotype
+Full genotype of the flies tested is indicated below.  control : Mi_PKC53 . mutant : Mi_PKCdelta . pinac : w-;Pbac_PKCina . pkc53 : Wtb .
