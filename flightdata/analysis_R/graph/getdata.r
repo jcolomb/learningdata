@@ -14,7 +14,7 @@ metafile$laser.power=suppressWarnings(as.numeric (as.character(metafile$laser.po
 
 metafile=subset (metafile, is.na(metafile$remarks))
 
-Names= read.csv ("shortnames.csv", header=TRUE,)[,-1]
+Names= read.csv ("shortnames2.csv", header=TRUE,)[,-1]
 Names[,3]=as.factor(gsub("RL","\n",Names[,2]))
 Names[,4]=as.factor(gsub("RL","",Names[,2]))
 

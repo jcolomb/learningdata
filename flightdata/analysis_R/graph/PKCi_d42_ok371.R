@@ -1,4 +1,4 @@
-setwd("/Users/choupi/Desktop/boulot/FSdata")
+#setwd("/Users/choupi/Desktop/boulot/FSdata")
 source("graph/getdata.r")
 title="PKCi: d42 & OK371"
 
@@ -27,7 +27,7 @@ datatest2= droplevels(datatest2)
 #datatest2$genotype2 <- factor(datatest2$genotype, levels = levels(datatest2$genotype)[neworder])
 levels(datatest2$shortname)
 
-neworder2= c(1,2,5,3,4)
+neworder2= c(1,3,5,2,4)#   2,5,3,4)
 datatest2$shortname <- factor(datatest2$shortname, levels = levels(datatest2$shortname)[neworder2])
 levels(datatest2$genotypefull)
 neworder= c(3,5,4,1,2)

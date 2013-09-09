@@ -45,5 +45,5 @@
 44	"THG4"	"THG4 RL x TrpA"	";UAS_TrpA/+;TH-Gal4/+;"
 45	"TrpA_CS"	"CS RL x TrpA"	";UAS_TrpA/+;"
 46	"TrpA_tdc2"	"tdc2G4 RL x TrpA"	";tdc2-Gal4/UAS_TrpA;"
-47	"wtb"	"WT(Wtb)"	"Wtb"
+47	"wtb"	"WT RL (Wtb)"	"Wtb"
 48	"wtbxTNT"	"Wtb RL x TNT"	"UAS-TNT/+"

@@ -1,4 +1,4 @@
-setwd("/Users/choupi/Desktop/boulot/FSdata")
+#setwd("/Users/choupi/Desktop/boulot/FSdata")
 source("graph/getdata.r")
 title="Too strong heatshock (37° for 2h)"
 
@@ -21,7 +21,7 @@ levels(datatest2$genotype)
 neworder= c(1,3,2)
 datatest2$genotype2 <- factor(datatest2$genotype, levels = levels(datatest2$genotype)[neworder])
 levels(datatest2$shortname)
-neworder2= c(2,3,1)
+neworder2= c(3,2,1)
 datatest2$shortname <- factor(datatest2$shortname, levels = levels(datatest2$shortname)[neworder2])
 levels(datatest2$genotypefull)
 neworder= c(1,2,3)

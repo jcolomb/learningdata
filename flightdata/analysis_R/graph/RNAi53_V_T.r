@@ -1,4 +1,4 @@
-setwd("/Users/choupi/Desktop/boulot/FSdata")
+#setwd("/Users/choupi/Desktop/boulot/FSdata")
 source("graph/getdata.r")
 
 title="PKC53eRNAi experiments"

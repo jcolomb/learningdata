@@ -1,4 +1,5 @@
 #setwd("/Users/choupi/Desktop/boulot/FSdata")
+
 source("graph/getdata.r")
 
 title="Putative mutants: no phenotype"
@@ -34,5 +35,6 @@ levels(datatest2$genotypefull2)
 
 source ("graph/makegraph.r")
 
-ggsave(file=paste("graph/pdf/",title,".pdf", sep=""), plot=plot,scale=1)
+#ggsave(file=paste("graph/pdf/","mutant",".pdf", sep=""), plot=plot,scale=1)
+
 

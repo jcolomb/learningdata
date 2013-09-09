@@ -1,4 +1,4 @@
-setwd("/Users/choupi/Desktop/boulot/FSdata")
+#setwd("/Users/choupi/Desktop/boulot/FSdata")
 source("graph/getdata.r")
 title="PKC53e & Inac RNAi experiments"
 datatest2= metafile[metafile$experimentid %in% c("20_PKCRNAI"  ),]

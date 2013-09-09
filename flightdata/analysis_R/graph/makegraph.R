@@ -11,6 +11,8 @@ c=data.frame(datatest2$mean_pretest,datatest2$X2_pretest2,10000*datatest2$mean_p
            10000*datatest2$mean_pretest <  (subneg-500)| is.na(datatest2$X1_pretest1),
            datatest2$X2_pretest2 > -subneg | !is.na(datatest2$X1_pretest1),
            datatest2$X2_pretest2 <  subneg | !is.na(datatest2$X1_pretest1), is.na(datatest2$X1_pretest1) )	
+
+
 colnames (c)= c(1:7)
 
 Pvalue <- function(x){
@@ -28,6 +30,7 @@ theme_jack <- function (base_size = 10, base_family = "") {
     theme_bw(base_size = base_size, base_family = base_family) %+replace% 
         theme(
         	title = element_text(size = 12)
+        	
             #axis.text = element_text(colour = "white"),
             ,axis.title.x = element_text(colour = "white", size=0),
             axis.title.y = element_text(size=12, angle=90),
@@ -35,12 +38,17 @@ theme_jack <- function (base_size = 10, base_family = "") {
             #panel.grid.minor.y = element_line(size=3),
             axis.text.x=element_text(size=8)
             ,panel.grid.major = element_line(colour = "grey")#,
+          ,axis.line=element_line()
+          ,panel.border = element_blank()
+        	,panel.grid.minor = element_blank()
            # plot.background = element_rect(fill="red")
            #,panel.grid = element_blank()
            ,panel.grid.major.x = element_blank() 
            #,axis.text.x = element_text(angle=90, vjust=0)
            ,legend.position = "none"
-
+          
+         #,scale_x_continuous(expand=c(0,0))
+        	
 
 
     )   
@@ -72,9 +80,9 @@ data.size2<- ddply(datatest2, .(shortname), summarize , star=Pvalue(score),score
  p=ggplot(datatest2, aes(x=factor(shortname),y= score, fill= shortname))
  plot=p+ geom_boxplot()+ labs(x="genotype",y="PI during final test", title=title)+ ylim(-1.2, 1)+
  scale_fill_grey(start = 0.9, end = 0.9)+ ##allow good bw prints
- 
+  scale_y_continuous(minor_breaks=NULL,breaks = seq(-1 , 1, 1) )+
 
- geom_text(aes(y= -1.1,label=paste("n =", n)), data=data.size, size=3.5) + geom_text(aes(label=paste(star)), data=data.size2,size=6) 
+ geom_text(aes(y= -1.1,label=paste("n =", n)), data=data.size, size=2) + geom_text(aes(label=paste(star)), data=data.size2,size=6) 
  
  # mm <- ddply(datatest2, "shortname", summarise, mmpg = mean(score))
 # ggplot(mm, aes(x = factor(shortname), y = mmpg)) + geom_bar(stat = "identity")

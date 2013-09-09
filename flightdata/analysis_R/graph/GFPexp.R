@@ -1,4 +1,4 @@
-setwd("/Users/choupi/Desktop/boulot/FSdata")
+#setwd("/Users/choupi/Desktop/boulot/FSdata")
 source("graph/getdata.r")
 title="Presence of a second UAS \n prevents the PKC inhibition"
 
@@ -26,10 +26,10 @@ datatest2= droplevels(datatest2)
 #neworder= c(1,2,3,4,6,7,5)
 #datatest2$genotype2 <- factor(datatest2$genotype, levels = levels(datatest2$genotype)[neworder])
 levels(datatest2$shortname)
-neworder2= c(1,2,3,5,4,6,7)
+neworder2= c(1,2,5,3,4)
 datatest2$shortname <- factor(datatest2$shortname, levels = levels(datatest2$shortname)[neworder2])
 levels(datatest2$genotypefull)
-neworder= c(3,2,1,7,6,4,5)
+neworder= c(1,3,5,2,4)
 datatest2$genotypefull2 <- factor(datatest2$genotypefull,levels = levels(datatest2$genotypefull)[neworder])
 #levels(datatest2$genotype2)
 levels(datatest2$shortname)
