@@ -9,7 +9,7 @@ require (lattice)
 require (gdata)
 require (rfigshare)
 #### experiment detail
-setwd("/Users/choupi/Desktop/boulot/FSdata")
+#setwd("/Users/choupi/Desktop/boulot/FSdata")
 
 filenameprefix ="tubG_PKC_gal4_HS2h/tG80_PKCi_elav_"
 datapoints <- 51
@@ -18,15 +18,13 @@ experimentid= "1_HS_test"
 treatment ="HeatShock_37d_2h__RT1-4h"
 experimentator = "Julien Colomb"
 	##to determine by first uploading the data and check levels(data$genotype)
-	 source("checkgenotype.r")
+	# source("checkgenotype.r")
 	
 newnames= c("tubGal80ts/+;UAS-PKCi/+","elav-Gal4/+;tubGal80ts/+;UAS-PKCi/+","elav-Gal4/+","elav-Gal4/+;tubGal80ts/+;UAS-PKCi/+")
 
 source("FSexportcode_common.r")
 ##specific
-		data$treatment[data$genotype =="PKC_elav_34\xb0"] = "HeatShock_34d_2h__RT1-4h"
-		data$experimentid[data$genotype =="PKC_elav_34\xb0"] = "1_1HS_test"
-		data$genotype[data$genotype =="PKC_elav_34\xb0"] = "PKC_elav"
+		data$treatment[data$genotype ==oldnames[4]] = "HeatShock_34d_2h__RT1-4h"
 
 #write.csv (data, file="metafile.csv")
 source("writemetafile.R")
@@ -37,11 +35,11 @@ source("writemetafile.R")
 filenameprefix ="PKCmut_OUTC/PKCmut_OUTC_"
 datapoints <- 67
 
-experimentid= "2_PKC53emutant_outcrossed"
+experimentid= "2_PKC53emutant"
 treatment ="none"
 experimentator = "Julien Colomb"
 	##to determine by first uploading the data and check levels(data$genotype)
-	 source("checkgenotype.r")
+	# source("checkgenotype.r")
 	
 newnames= c("PKC53mutant (outcrossed)","CS")
 
@@ -125,7 +123,7 @@ experimentator = "Julien Colomb"
 	 source("checkgenotype.r")
 
 
-newnames= c("elav-Gal4/+","elav-Gal4/+;tubGal80ts/+ ; UAS-PKCi/+","tubGal80ts/+ ; UAS-PKCi/+" )
+newnames= c("elav-Gal4/+","elav-Gal4/+;UASPKCi/+;tubGal80ts/+","UASPKCi/+;tubGal80ts/+")
 
 source("FSexportcode_common.r")
 source("writemetafile.R")
@@ -144,7 +142,7 @@ experimentator = "Julien Colomb"
 	 source("checkgenotype.r")
 
 
-newnames= c("elav-Gal4/+","elav-Gal4/+;tubGal80ts/+ ; UAS-PKCi/+""elav-Gal4/+;tubGal80ts/+ ; UAS-PKCi/+","tubGal80ts/+ ; UAS-PKCi/+" )
+newnames= c("elav-Gal4/+","elav-Gal4/+;UASPKCi/+;tubGal80ts/+","UASPKCi/+;tubGal80ts/+")
 
 source("FSexportcode_common.r")
 source("writemetafile.R")
@@ -161,7 +159,7 @@ experimentator = "Julien Colomb"
 	 source("checkgenotype.r")
 
 
-newnames= c("elav-Gal4/+;tubGal80ts/+ ; UAS-PKCi/+","tubGal80ts/+ ; UAS-PKCi/+" ,"elav-Gal4/+")
+newnames= c("elav-Gal4/+;UASPKCi/+;tubGal80ts/+","UASPKCi/+;tubGal80ts/+","elav-Gal4/+")
 
 source("FSexportcode_common.r")
 source("writemetafile.R")
@@ -178,7 +176,7 @@ experimentator = "Julien Colomb"
 	##to determine by first uploading the data and check levels(data$genotype)
 	 source("checkgenotype.r")
 
-newnames= c("elav-Gal4/+;tubGal80ts/+ ; UAS-PKCi/+","elav-Gal4/+","tubGal80ts/+ ; UAS-PKCi/+" )
+newnames= c("elav-Gal4/+;UASPKCi/+;tubGal80ts/+","elav-Gal4/+","UASPKCi/+;tubGal80ts/+")
 
 source("FSexportcode_common.r")
 source("writemetafile.R")
@@ -225,13 +223,6 @@ colnames(insert)= c("protocol", "color_when_positive")
 x <-colnames(data) [1]
 data= data.frame(data[,1],insert,data[,2:16], data[,19:length(data)])
 x->colnames(data) [1]
-
-levels(data$remarksnotimportant)= c(levels(data$remarksnotimportant),"cold shock day before ")
-data$remarksnotimportant[data$remarks =="cold shock day before "]= "cold shock day before "
-data$remarksnotimportant[data$remarks =="coldshock"]= "cold shock day before "
-data$remarks[data$remarks =="cold shock day before "]= NA
-data$remarks[data$remarks =="coldshock"]= NA
-
 
 source("writemetafile.R")
 
@@ -325,12 +316,12 @@ experimentator = "Julien Colomb"
 	 source("checkgenotype.r")
 	data = subset (data, data$genotype !="A")
 	data = subset (data, data$genotype !="B") 
-	data= droplevels(data) 
+	data= drop.levels(data) 
 	levels(data$genotype)
 	i= c(1:nrow(data)) 
 
-newnames= c("elav-Gal4/+;tubGal80ts/+ ; UAS-PKCi/+", "tubGal80ts/+ ; UAS-PKCi/+;OK371/+","elav-Gal4/+","tubGal80ts/+ ; UAS-PKCi/+ __ H24-Gal4","tubGal80ts/+ ; UAS-PKCi/c232-Gal4","tubGal80ts/+ ; UAS-PKCi/+","tubGal80ts/+ ; UAS-PKCi/d42-Gal4","OK371/+", "tubGal80ts/+ ; UAS-PKCi/7y_Gal4,c819-Gal4"  )
-#data.frame(levels(data$genotype),newnames)
+newnames= c("elavGal4/+","OK371/+", "tubGal80ts/+ ; UAS-PKCi/7y_Gal4,c819-Gal4","tubGal80ts/+ ; UAS-PKCi/c232-Gal4", "tubGal80ts/+ ; UAS-PKCi/+","tubGal80ts/+ ; UAS-PKCi/d42-Gal4", "elav-Gal4/+;tubGal80ts/+ ; UAS-PKCi","tubGal80ts/+ ; UAS-PKCi/+ __ H24-Gal4","tubGal80ts/+ ; UAS-PKCi/+;OK371/+" )
+
 source("FSexportcode_common.r")
 
 
@@ -339,7 +330,29 @@ source("writemetafile.R")
 ####
 #####
 
+filenameprefix ="tubG_PKC_screen/tG80_PKCi_elav_"
+datapoints <- 259 ## old152 had no rawdata
 
+experimentid= "14_PKCi_screen"
+treatment ="Heatshock_35d_4h__25dfor1-4h"
+experimentator = "Julien Colomb"
+	##to determine by first uploading the data and check levels(data$genotype)
+	 source("checkgenotype.r")
+	data = subset (data, data$genotype !="A")
+	data = subset (data, data$genotype !="B") 
+	data= drop.levels(data) 
+	levels(data$genotype)
+	i= c(1:nrow(data)) 
+
+newnames= c("elavGal4/+","OK371/+", "tubGal80ts/+ ; UAS-PKCi/7y_Gal4,c819-Gal4","tubGal80ts/+ ; UAS-PKCi/c232-Gal4", "tubGal80ts/+ ; UAS-PKCi/+","tubGal80ts/+ ; UAS-PKCi/d42-Gal4", "elav-Gal4/+;tubGal80ts/+ ; UAS-PKCi","tubGal80ts/+ ; UAS-PKCi/+ __ H24-Gal4","tubGal80ts/+ ; UAS-PKCi/+;OK371/+" )
+
+source("FSexportcode_common.r")
+
+
+source("writemetafile.R")
+
+###
+#####
 
 filenameprefix ="tG80_PKCi_d42chaG80/tG80_PKCi_d42chaG80__"
 datapoints <- 105
@@ -359,7 +372,7 @@ data=drop.levels(data)
 	levels(data$genotype)
 	
 
-newnames= c("d42-Gal4, cha-Gal80/+", "OK371/+","tubGal80ts/+ ; UAS-PKCi/+"  ,"tubGal80ts/+ ; UAS-PKCi/d42-Gal4, cha-Gal80" )
+newnames= c("d42-Gal4, cha-Gal80/+", "OK371/+","tubGal80ts/+ ; UAS-PKCi","tubGal80ts/+ ; UAS-PKCi/d42-Gal4, cha-Gal80" )
 
 source("FSexportcode_common.r")
 
@@ -386,7 +399,7 @@ data=drop.levels(data)
 	levels(data$genotype)
 	
 
-newnames= c("c380-Gal4/+", "d42Gal4/+","c380Gal4/+; tubGal80ts/+ ; UAS-PKCi/+","tubGal80ts/+ ; UAS-PKCi/d42-Gal4" )
+newnames= c("c380-Gal4/+", "d42Gal4/+","tubGal80ts/+ ; UAS-PKCi/c380Gal4","tubGal80ts/+ ; UAS-PKCi/d42-Gal4" )
 
 source("FSexportcode_common.r")
 
@@ -406,7 +419,7 @@ experimentator = "Julien Colomb"
 	 
 	
 
-newnames= c("UAS-GFP;;d42Gal4,chaGal80/+","d42Gal4/+","tubGal80ts/+ ; UAS-PKCi/d42-Gal4","UAS-GFP;tubGal80ts/+;UASPKCi/d42Gal4,chaGal80" )
+newnames= c("UAS-GFP;;d42Gal4,chaGal80/+","d42Gal4,chaGal80/+","tubGal80ts/+ ; UAS-PKCi/d42-Gal4","UAS-GFP;tubGal80ts/+;UASPKCi/d42Gal4,chaGal80" )
 
 source("FSexportcode_common.r")
 
@@ -430,14 +443,7 @@ newnames= c("UAS-GFP,C380-GAL4;tubGal80ts/+;UASPKCi/cha-Gal80","UAS-GFP,C380-GAL
 
 
 source("FSexportcode_common.r")
-levels(data$genotype)=c(levels(data$genotype),"PKC_G_c380cha","CS_G_c380cha","CS_Gd42-chG80","PKC_Gd42-chG80")
-data$genotype[data$genotype =="PKC_c380"]="PKC_G_c380cha"
-data$genotype[data$genotype =="CS_c380"]="CS_G_c380cha"
-data$genotype[data$genotype =="CS_d42-chG80"]="CS_Gd42-chG80"
-data$genotype[data$genotype =="PKC_d42-chG80"]="PKC_Gd42-chG80"
 
-data=drop.levels(data)
-	levels(data$genotype)
 
 source("writemetafile.R")
 ###
@@ -480,37 +486,33 @@ data= drop.levels(data)
 levels(data$genotype )
 	
 
-newnames= c(";;UAS_PKC53eRNAi_27696/+","elavGal4/+;tubGal80ts/+;UAS_PKC53eRNAI_27696/+", "elavGal4/+;tubGal80ts/+;UAS_PKCInacRNAI_2895/+" )
+newnames= c(";;+/UAS_PKC53eRNAi_/+","elavGal4/+;tubGal80ts/+;UAS_PKC53eRNAI/+", "UAS-TNT/+" )
 
 
 source("FSexportcode_common.r")
-source("writemetafile.R")
-### bjoerndata
-experimentator = "Bjoern Brembs"
-data = read.csv ("PKCRNAi/bjoerndata.csv", header=TRUE)
-levels(data$genotype) = c(levels(data$genotype),"RnaiPKC_53e","RnaiPKC_Inac","CSx53eRNAi")
-	 data$genotype[data$genotype =="RnaiPKC_J"]="RnaiPKC_53e"
-data$genotype[data$genotype =="RnaiPKC_H"]="RnaiPKC_Inac"
-data$genotype[data$genotype =="RnaiPKC_K"]="CSx53eRNAi"
-data$genotype[data$genotype =="csx53eRNAi"]="CSx53eRNAi"
-data= drop.levels(data)
 
-source("bjoerndatatreatment.r")
+
+source("writemetafile.R")
+
 #####
 
 filenameprefix ="TrpA/TrpA_"
-datapoints <- 21
+datapoints <- 21 ##original 3 and 4 out
 
-experimentid= "21_THG4_TdcG4_TrpA"
-treatment ="none_laserturned down"
+experimentid= "21_TrpA"
+treatment ="none_weaklaser"
 experimentator = "Julien Colomb"
-	##to determine by first uploading the data and check levels(data$genotype)
-	 source("checkgenotype.r")
+##to determine by first uploading the data and check levels(data$genotype)
 
-	
-newnames= c(";UAS_TrpA/+;",";tdc2-Gal4/UAS_TrpA;", ";UAS_TrpA/+;TH-Gal4/+;")
+source("checkgenotype.r")
+
+
+
+newnames= c(";;+/UAS-TrpA_/+","tdc2-Gal4/+;UAS-TrpA_/+", "tH-Gal4/+;UAS-TrpA_/+" )
 
 
 source("FSexportcode_common.r")
+
+
 source("writemetafile.R")
 
