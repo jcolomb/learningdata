@@ -9,7 +9,9 @@ require (lattice)
 require (gdata)
 require (rfigshare)
 #### experiment detail
-#setwd("/Users/choupi/Desktop/boulot/FSdata")
+sourcefolder= "/Users/choupi/Gits/learningdata/flightdata/analysis_R"
+datafolder="/Users/choupi/Desktop/boulot/FSdata"
+setwd(sourcefolder)
 
 filenameprefix ="tubG_PKC_gal4_HS2h/tG80_PKCi_elav_"
 datapoints <- 51
