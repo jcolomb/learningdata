@@ -18,7 +18,7 @@ experimentid= "1_HS_test"
 treatment ="HeatShock_37d_2h__RT1-4h"
 experimentator = "Julien Colomb"
 	##to determine by first uploading the data and check levels(data$genotype)
-	# source("checkgenotype.r")
+	 source("checkgenotype.r")
 	
 newnames= c("tubGal80ts/+;UAS-PKCi/+","elav-Gal4/+;tubGal80ts/+;UAS-PKCi/+","elav-Gal4/+","elav-Gal4/+;tubGal80ts/+;UAS-PKCi/+")
 
@@ -26,7 +26,7 @@ source("FSexportcode_common.r")
 ##specific
 		data$treatment[data$genotype ==oldnames[4]] = "HeatShock_34d_2h__RT1-4h"
 
-#write.csv (data, file="metafile.csv")
+write.csv (data, file="metafile.csv")
 source("writemetafile.R")
 
 ####
@@ -35,11 +35,11 @@ source("writemetafile.R")
 filenameprefix ="PKCmut_OUTC/PKCmut_OUTC_"
 datapoints <- 67
 
-experimentid= "2_PKC53emutant"
+experimentid= "2_PKC53emutant_outcrossed"
 treatment ="none"
 experimentator = "Julien Colomb"
 	##to determine by first uploading the data and check levels(data$genotype)
-	# source("checkgenotype.r")
+	 source("checkgenotype.r")
 	
 newnames= c("PKC53mutant (outcrossed)","CS")
 
@@ -61,6 +61,7 @@ treatment ="none"
 experimentator = "Julien Colomb"
 	##to determine by first uploading the data and check levels(data$genotype)
 	source("checkgenotype.r")
+	
 	levels(data$genotype)= c(levels(data$genotype), "FoxP_CS")
 data$genotype[data$genotype =="FoxP_E"]="FoxP_CS"
 data$genotype[data$genotype =="FoxP_F"]="FoxP_elav"
