@@ -27,8 +27,9 @@ newnames= c("tubGal80ts/+;UAS-PKCi/+","elav-Gal4/+;tubGal80ts/+;UAS-PKCi/+","ela
 source("FSexportcode_common.r")
 ##specific
 		data$treatment[data$genotype ==oldnames[4]] = "HeatShock_34d_2h__RT1-4h"
-
-write.csv (data, file="metafile.csv")
+setwd(datafolder)
+#write.csv (data, file="metafile.csv")
+setwd(sourcefolder)
 source("writemetafile.R")
 
 ####
@@ -84,10 +85,11 @@ source("FSexportcode_common.r")
 source("writemetafile.R")
 ###
 ### bjoerndata
+setwd(datafolder)
 experimentator = "Bjoern Brembs"
 data = read.csv ("Foxp_dicer_25/bjoerndata.csv", header=TRUE)
 
-
+setwd(sourcefolder)
 source("bjoerndatatreatment.r")
 ####
 #####

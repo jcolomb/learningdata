@@ -54,6 +54,7 @@ data$score = data$X8_test2/10000
 data$scorerelative= data$score-data$mean_pretest
 
 ## writing raw data
+setwd(datafolder)
 for (j in i){
 	FILENAME <- paste("alldata/",experimentid,"_",j,".csv", sep="")
 	if (!file.exists(FILENAME)){
@@ -64,4 +65,4 @@ for (j in i){
 }
 data$remarks= as.factor(data$remarks)
 data$remarksnotimportant= as.factor(data$remarksnotimportant)
- 
+ setwd(sourcefolder)
