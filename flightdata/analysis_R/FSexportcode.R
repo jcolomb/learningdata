@@ -11,6 +11,9 @@ require (rfigshare)
 #### experiment detail
 sourcefolder= "/Users/choupi/Gits/learningdata/flightdata/analysis_R"
 datafolder="/Users/choupi/Desktop/boulot/FSdata"
+sourcefolder="D:/dokumente/GitHub/learningdata/flightdata/analysis_R"
+datafolder="D:/dokumente/data/FSdata"
+
 setwd(sourcefolder)
 
 filenameprefix ="tubG_PKC_gal4_HS2h/tG80_PKCi_elav_"
@@ -28,6 +31,7 @@ source("FSexportcode_common.r")
 ##specific
 		data$treatment[data$genotype ==oldnames[4]] = "HeatShock_34d_2h__RT1-4h"
 setwd(datafolder)
+#data$figshareid<- NA
 #write.csv (data, file="metafile.csv")
 setwd(sourcefolder)
 source("writemetafile.R")

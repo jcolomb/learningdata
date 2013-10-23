@@ -38,10 +38,11 @@ source("graph/GFPexp.r")  ##probably not for paper: UASGFP-> no phenotype
 
 
 #P_8_2=P_8+theme(axis.text.x=element_text(size=6))
-pdf("graph/results2.pdf", paper="a4")
+pdf("graph/results3.pdf", paper="a4")
 grid.arrange(P_1, P_2, ncol=2, nrow=2)
-grid.arrange(P_4, P_5,P_6, P_7)
-grid.arrange(P_8, P_9,P_10, ncol=2)
+grid.arrange(P_4, P_6, P_7, ncol=2, nrow=2)
+grid.arrange(P_8, P_9,P_10, ncol=2, nrow=2)
+grid.arrange(P_3, P_5,P_11,  ncol=2, nrow=2)
 dev.off()
 
 #P_1+geom.line()

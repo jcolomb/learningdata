@@ -1,10 +1,30 @@
 
+#install.packages(c("plotrix", "MASS","vioplot", "UsingR","gplots","lattice","gdata","rfigshare"))
+
+require(plotrix)
+require(MASS)
+require (vioplot)
+require (UsingR)
+require (gplots)
+require (lattice)
+require (gdata)
+require (rfigshare)
+#### experiment detail
+sourcefolder= "/Users/choupi/Gits/learningdata/flightdata/analysis_R"
+datafolder="/Users/choupi/Desktop/boulot/FSdata"
+sourcefolder="D:/dokumente/GitHub/learningdata/flightdata/analysis_R"
+datafolder="D:/dokumente/data/FSdata"
+options(FigshareKey = "ABqLKahr9d8EBuBCdBBxpg")
+options(FigsharePrivateKey = "OCehduRnbLFvQBtD4KAZBA")
+options(FigshareToken = "Jr4eYBQkgEuOvJ5PdAlXpQ851uziewWIa5M3EgqpySAQJr4eYXQkgEuOvJ5PdAlXpQ")
+options(FigsharePrivateToken = "0WX9Lz0bWN5TA3fP0xnAXA")
 
 options(FigshareKey = "jBkrLNsYbeov2oM09cXBBw")
 options(FigsharePrivateKey = "LhQkDeJaVJzAhWRIKYeobA")
 options(FigshareToken = "BYuYn4OjWjd8njBKCyeFXQOEAYY1MfLJ1Y0z80rVWj6AXYuYn4OjWjd8njXKCyeFXQ")
 options(FigsharePrivateToken = "aC2q4lBod3Xl52CeKwp7Fg")
 fs_auth()
+fs_browse(mine=TRUE)
 
 setwd(datafolder)
 metafile= read.csv ("metafile.csv", header=TRUE)[,-1]
@@ -18,7 +38,7 @@ metafile$laser.power=suppressWarnings(as.numeric (as.character(metafile$laser.po
 
 MINE =TRUE
 ##loop for every experimentid
-for (i in c(1: 2)){#length(levels(metafile$experimentid)))){
+for (i in c(1: 1)){#length(levels(metafile$experimentid)))){
 thisexp= levels(metafile$experimentid)[i]
 	submetaf = subset(metafile, metafile$experimentid == thisexp)
 	submetaf=droplevels(submetaf)
@@ -27,7 +47,8 @@ thisexp= levels(metafile$experimentid)[i]
 		thisfigshareid=fs_create(
 		paste("rawfiles for ", thisexp),
 		"This data is raw data from flight experiment, see the metadata figshare article for a description. data start at line 21, data is in 4 rows: time, torque, is_laser_on, sequence_ number (meaning depends on the protocol, usually 2 min. periods).",
-		type = "fileset"
+		type = "fileset", verbose =TRUE,
+	
 		)
 		}else{thisfigshareid=submetaf$figshareid[1]}
 		
