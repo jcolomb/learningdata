@@ -14,15 +14,17 @@ sourcefolder= "/Users/choupi/Gits/learningdata/flightdata/analysis_R"
 datafolder="/Users/choupi/Desktop/boulot/FSdata"
 sourcefolder="D:/dokumente/GitHub/learningdata/flightdata/analysis_R"
 datafolder="D:/dokumente/data/FSdata"
+
+
 options(FigshareKey = "ABqLKahr9d8EBuBCdBBxpg")
 options(FigsharePrivateKey = "OCehduRnbLFvQBtD4KAZBA")
 options(FigshareToken = "Jr4eYBQkgEuOvJ5PdAlXpQ851uziewWIa5M3EgqpySAQJr4eYXQkgEuOvJ5PdAlXpQ")
 options(FigsharePrivateToken = "0WX9Lz0bWN5TA3fP0xnAXA")
 
-options(FigshareKey = "jBkrLNsYbeov2oM09cXBBw")
-options(FigsharePrivateKey = "LhQkDeJaVJzAhWRIKYeobA")
-options(FigshareToken = "BYuYn4OjWjd8njBKCyeFXQOEAYY1MfLJ1Y0z80rVWj6AXYuYn4OjWjd8njXKCyeFXQ")
-options(FigsharePrivateToken = "aC2q4lBod3Xl52CeKwp7Fg")
+# options(FigshareKey = "jBkrLNsYbeov2oM09cXBBw")
+# options(FigsharePrivateKey = "LhQkDeJaVJzAhWRIKYeobA")
+# options(FigshareToken = "BYuYn4OjWjd8njBKCyeFXQOEAYY1MfLJ1Y0z80rVWj6AXYuYn4OjWjd8njXKCyeFXQ")
+# options(FigsharePrivateToken = "aC2q4lBod3Xl52CeKwp7Fg")
 fs_auth()
 fs_browse(mine=TRUE)
 
@@ -50,6 +52,7 @@ thisexp= levels(metafile$experimentid)[i]
 		type = "fileset", verbose =TRUE,
 	
 		)
+		fs_add_authors(thisfigshareid,"96464","97229")
 		}else{thisfigshareid=submetaf$figshareid[1]}
 		
 		#thisfigshareid=829574
@@ -63,11 +66,11 @@ thisexp= levels(metafile$experimentid)[i]
 				fs_upload(thisfigshareid, file = paste("alldata",submetaf$rawfilename[j], sep="/"))
 			}else{print("already uploaded")}
 			
-		submetaf$figshareid= thisfigshareid
+		
 		
 	}	
 	### endloop to upload each file not already up
-		
+submetaf$figshareid= thisfigshareid		
 newmetafile = subset(metafile, metafile$experimentid != thisexp)
 newmetafile = rbind(newmetafile,submetaf)
 write.csv (newmetafile, file = "metafile.csv")		
