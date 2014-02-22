@@ -52,7 +52,7 @@ thisexp= levels(metafile$experimentid)[i]
 		type = "fileset", verbose =TRUE,
 	
 		)
-		fs_add_authors(thisfigshareid,"96464","97229")
+		fs_add_authors(thisfigshareid,list("96464","97229"))
 		}else{thisfigshareid=submetaf$figshareid[1]}
 		
 		#thisfigshareid=829574
@@ -77,5 +77,5 @@ write.csv (newmetafile, file = "metafile.csv")
 		#read.csv(paste("alldata",submetaf$rawfilename[j], sep="/"))
 }		
 ###end loop every experiment		
-	
+	fs_add_authors(658786,"97229")
 		

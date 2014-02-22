@@ -34,4 +34,4 @@ Full genotype of the flies tested is indicated below.  d42G4,chaG80  x CS : d42-
 
 Presence of a second UAS 
  prevents the PKC inhibition
-Full genotype of the flies tested is indicated below.  CS  x T_PKCi : tubGal80ts/+;UASPKCi/+ . GFP,  c380;chaG80  x T_PKCi : UAS-GFP,C380-GAL4;tubGal80ts/+;UASPKCi/cha-Gal80 . GFP;  d42G4,chaG80  x T_PKCi : UAS-GFP;tubGal80ts/+;UASPKCi/d42Gal4,chaGal80 . GFP,  c380G4;chaG80  x CS : UAS-GFP,C380-GAL4/+;;cha-Gal80/+ . GFP;  d42G4,chaG80  x CS : UAS-GFP;;d42Gal4,chaGal80/+ .
+Full genotype of the flies tested is indicated below.  CS  x T_PKCi : tubGal80ts/+;UASPKCi/+ . GFP,  c380;chaG80  x T_PKCi : UAS-GFP,C380-GAL4/+;;cha-Gal80/+ . GFP;  d42G4,chaG80  x T_PKCi : UAS-GFP;tubGal80ts/+;UASPKCi/d42Gal4,chaGal80 . GFP,  c380G4;chaG80  x CS : UAS-GFP,C380-GAL4;tubGal80ts/+;UASPKCi/cha-Gal80 . GFP;  d42G4,chaG80  x CS : UAS-GFP;;d42Gal4,chaGal80/+ .

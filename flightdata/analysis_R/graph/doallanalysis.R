@@ -1,7 +1,7 @@
 
 ###do all analysis again. initialisation
 #setwd("/Users/choupi/Desktop/boulot/FSdata")
-setwd("D:/dokumente/GitHub/learningdata/flightdata/analysis_R/")
+#setwd("D:/dokumente/GitHub/learningdata/flightdata/analysis_R/")
 numberplot=0
 sink("graph/legends.txt", append=FALSE)
 cat("Text for figure legends")
@@ -38,11 +38,13 @@ source("graph/GFPexp.r")  ##probably not for paper: UASGFP-> no phenotype
 
 
 #P_8_2=P_8+theme(axis.text.x=element_text(size=6))
-pdf("graph/results3.pdf", paper="a4")
+pdf("graph/results4.pdf", paper="a4")
 grid.arrange(P_1, P_2, ncol=2, nrow=2)
-grid.arrange(P_4, P_6, P_7, ncol=2, nrow=2)
-grid.arrange(P_8, P_9,P_10, ncol=2, nrow=2)
-grid.arrange(P_3, P_5,P_11,  ncol=2, nrow=2)
+grid.arrange(P_4, P_6,  ncol=2, nrow=2)
+grid.arrange(P_7, P_8,  ncol=2, nrow=2)
+
+grid.arrange(P_9,P_10, ncol=2, nrow=2)
+#grid.arrange(P_3, P_5,P_11,  ncol=2, nrow=2)
 dev.off()
 
 #P_1+geom.line()
