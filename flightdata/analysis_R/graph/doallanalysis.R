@@ -1,7 +1,7 @@
 
 ###do all analysis again. initialisation
 #setwd("/Users/choupi/Desktop/boulot/FSdata")
-#setwd("D:/dokumente/GitHub/learningdata/flightdata/analysis_R/")
+#setwd("~/Gits/learningdata/flightdata/analysis_R/")
 numberplot=0
 sink("graph/legends.txt", append=FALSE)
 cat("Text for figure legends")

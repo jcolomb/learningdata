@@ -12,7 +12,7 @@ require (rfigshare)
 #### experiment detail
 sourcefolder= "/Users/choupi/Gits/learningdata/flightdata/analysis_R"
 datafolder="/Users/choupi/Desktop/boulot/FSdata"
-sourcefolder="D:/dokumente/GitHub/learningdata/flightdata/analysis_R"
+sourcefolder="/Users/colombj/Gits/learningdata/flightdata/analysis_R"
 datafolder="D:/dokumente/data/FSdata"
 
 
@@ -26,7 +26,9 @@ options(FigsharePrivateToken = "0WX9Lz0bWN5TA3fP0xnAXA")
 # options(FigshareToken = "BYuYn4OjWjd8njBKCyeFXQOEAYY1MfLJ1Y0z80rVWj6AXYuYn4OjWjd8njXKCyeFXQ")
 # options(FigsharePrivateToken = "aC2q4lBod3Xl52CeKwp7Fg")
 fs_auth()
-fs_browse(mine=TRUE)
+hit=fs_browse(mine=TRUE)
+class(hit) <- "list"
+print(hit)
 
 setwd(datafolder)
 metafile= read.csv ("metafile.csv", header=TRUE)[,-1]
