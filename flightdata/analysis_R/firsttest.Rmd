@@ -2,18 +2,21 @@
 title: "figuremaking"
 author: "julien"
 date: "25 Sep 2015"
-output: pdf_document
+output:
+  pdf_document:
+    keep_tex: true
+    fig_caption: true
 ---
 
 
-```{r, echo=FALSE}
+```{r, include=FALSE, cache=FALSE}
 setwd("~/Gits/learningdata/flightdata/analysis_R/")
 source("Mastercode.r")
 ```
 
 You can also embed plots, for example:
 
-```{r, echo=FALSE, caption= "first figure"}
+```{r, echo=FALSE, fig.cap= "first figure"}
 P_1
 ```
 
