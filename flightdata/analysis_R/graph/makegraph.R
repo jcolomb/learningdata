@@ -89,6 +89,8 @@ data.size2<- ddply(datatest2, .(shortname), summarize , star=Pvalue(score),score
 # if (length(levels(datatest2$shortname ))>4){
 	# ggsave(file=paste("graph/pdfs/",title,".pdf", sep=""), plot=plot,scale=0.8)
 # }else{ggsave(file=paste("graph/pdfs/",title,".pdf", sep=""), plot=plot,scale=0.5)}
+plot= plot+
+  geom_violin(width=0.5, alpha=0.10, colour="grey")
 
 assign(paste("P_", numberplot, sep=""),plot)
 
