@@ -1,5 +1,5 @@
 sourcefolder="/Users/colombj/Gits/learningdata/flightdata/analysis_R"
-datafolder="~/Desktop/boulot/FSdata"
+#datafolder="~/Desktop/boulot/FSdata"
 require(rfigshare)
 fs_auth()
 id= 695950 
@@ -39,7 +39,9 @@ for (i in c(1: length(levels(metafile$experimentid)))){
   }else{thisfigshareid=submetaf$figshareid[1]}
   
   #thisfigshareid=829574
-  setwd(datafolder)
+  
+  #setwd(datafolder)
+  
   ## get list of data already uploaded
   detail=fs_details(thisfigshareid, mine = MINE)
   a=sapply(detail$files, function(x) x$name) 
@@ -58,7 +60,8 @@ for (i in c(1: length(levels(metafile$experimentid)))){
   submetaf$figshareid[submetaf$rawfilename!="not_accessible"]= thisfigshareid		
   newmetafile = subset(newmetafile, newmetafile$experimentid != thisexp)
   newmetafile = rbind(newmetafile,submetaf)
-  #write.csv (newmetafile, file = "metafile.csv")		
+  #write.csv (newmetafile, file = "metafile.csv")	
+  fs_add_categories(thisfigshareid, "Neuroscience")
   fs_make_public(thisfigshareid)
   #read.csv(paste("alldata",submetaf$rawfilename[j], sep="/"))
 }		
