@@ -1,4 +1,4 @@
-setwd("~/Gits/learningdata/flightdata/analysis_R/")
+setwd("./flightdata/analysis_R/")
 #install.packages(c("plotrix", "MASS","vioplot", "UsingR","gplots","lattice","gdata","rfigshare"))
 
 source("getdatafigshare.r")

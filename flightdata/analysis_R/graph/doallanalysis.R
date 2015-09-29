@@ -1,3 +1,4 @@
+library(cowplot)
 
 ###do all analysis again. initialisation
 #setwd("/Users/choupi/Desktop/boulot/FSdata")
@@ -12,7 +13,7 @@ sink()
 ##variables
 subneg=6500
 additional_text = " Both a positive and a negative control were tested in parallel with this experiment."
-library(cowplot)
+
 
 
 ##PKC gene

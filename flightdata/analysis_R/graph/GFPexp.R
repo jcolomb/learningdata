@@ -1,6 +1,6 @@
 #setwd("/Users/choupi/Desktop/boulot/FSdata")
 source("graph/getdata.r")
-title="Presence of a second UAS \n prevents the PKC inhibition"
+title="Presence of a second UAS prevents the PKC inhibition"
 
 datatest2= metafile[metafile$treatment %in% c("Heatshock_35d_4h__25dfor1-4h"  ),]
 datatest2= droplevels(datatest2)
