@@ -32,6 +32,5 @@ Full genotype of the flies tested is indicated below.  c380G4  x T_PKCi : c380-G
 PKCi: d42Gal4,chaG80
 Full genotype of the flies tested is indicated below.  d42G4,chaG80  x CS : d42-Gal4, cha-Gal80/+ . d42G4,chaG80  x T_PKCi : tubGal80ts/+ ; UAS-PKCi/d42-Gal4, cha-Gal80 . CS  x T_PKCi : tubGal80ts/+ ; UAS-PKCi/+ .
 
-Presence of a second UAS 
- prevents the PKC inhibition
+Presence of a second UAS prevents the PKC inhibition
 Full genotype of the flies tested is indicated below.  CS  x T_PKCi : tubGal80ts/+;UASPKCi/+ . GFP,  c380;chaG80  x T_PKCi : UAS-GFP,C380-GAL4/+;;cha-Gal80/+ . GFP;  d42G4,chaG80  x T_PKCi : UAS-GFP;tubGal80ts/+;UASPKCi/d42Gal4,chaGal80 . GFP,  c380G4;chaG80  x CS : UAS-GFP,C380-GAL4;tubGal80ts/+;UASPKCi/cha-Gal80 . GFP;  d42G4,chaG80  x CS : UAS-GFP;;d42Gal4,chaGal80/+ .
