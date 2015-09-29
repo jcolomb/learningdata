@@ -171,3 +171,5 @@ pip-log.txt
 .mr.developer.cfg
 .Rproj.user
 .httr-oauth
+
+flightdata/analysis_R/graph/pdf/Too strong heatshock (37Â° for 2h).pdf
