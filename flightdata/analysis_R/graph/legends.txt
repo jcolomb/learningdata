@@ -11,10 +11,10 @@ Full genotype of the flies tested is indicated below.  CS  x 53eRi_V : ;;UAS_PKC
 PKC53eRNAi experiments
 Full genotype of the flies tested is indicated below.  elavG4;tG80  x CS : UAS_PKC53eRNAi_vienna/+ . CS  x 53eRi_V : elavG4/+;tubGal80ts/+;UAS_PKC53eRNAi_vienna/+ . CS  x 53eRi_T : elavG4/+;tubGal80ts/+ . elavG4;tG80  x  53eRi_T : elavG4/+;tubGal80ts/UAS_PKC53eRNAi_Trip . elavG4;tG80  x  53eRi_V : UAS_PKC53eRNAi_Trip/+ .
 
-Mild heat shocks (pooled)
+Mild heat-shocks (pooled)
 Full genotype of the flies tested is indicated below.  elavG4  xCS : elav-Gal4/+ . elavG4  x T_PKCi : elav-Gal4/+;tubGal80ts/+ ; UAS-PKCi/+ . CS  x T_PKCi : tubGal80ts/+ ; UAS-PKCi/+ .. Different protocols were tested: Heat shock at 33° for 15h, 36° for 2h, and 37°for 1h
 
-Too strong heatshock (37° for 2h)
+Too strong heat-shock
 Full genotype of the flies tested is indicated below.  elavG4  xCS : elav-Gal4/+ . elavG4  x T_PKCi : elav-Gal4/+;tubGal80ts/+;UAS-PKCi/+ . CS  x T_PKCi : tubGal80ts/+;UAS-PKCi/+ .
 
 PKCi: elav positive control

@@ -37,7 +37,7 @@ source("graph/d42cha.r")
 
 source("graph/GFPexp.r")  ##probably not for paper: UASGFP-> no phenotype
 
-##comment for knitr
+##comment for knitr, uncomment otherwise:
 
 #P_8_2=P_8+theme(axis.text.x=element_text(size=6))
 # 

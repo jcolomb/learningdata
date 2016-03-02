@@ -1,6 +1,6 @@
 #setwd("/Users/choupi/Desktop/boulot/FSdata")
 source("graph/getdata.r")
-title="Too strong heatshock (37° for 2h)"
+title="Too strong heat-shock"
 
 datatest2= metafile[metafile$treatment %in% c("HeatShock_37d_2h__RT1-4h"),]
 datatest2= droplevels(datatest2)
